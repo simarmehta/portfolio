@@ -1,0 +1,522 @@
+/* ==========================
+   RESET & GLOBAL
+========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Montserrat', sans-serif;
+    background: #0e0e0e;
+    color: #ffffff;
+    font-size: 16px;
+  }
+  
+  body {
+    /* You can make a container for the starfield or keep it as is */
+  }
+  
+  /* Container utility */
+  .container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  
+  /* Generic section spacing */
+  .section {
+    padding: 4rem 0;
+    position: relative;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    position: relative;
+  }
+  
+  /* Subtle underline */
+  .section-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(45deg, #ff00ff, #00fff9);
+    margin: 0.75rem auto 0;
+    border-radius: 10px;
+  }
+  
+  /* Buttons */
+  .btn,
+  .btn-small {
+    display: inline-block;
+    background: linear-gradient(135deg, #ff00ff, #4400ff);
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: background 0.4s ease;
+  }
+  
+  .btn:hover,
+  .btn-small:hover {
+    background: linear-gradient(135deg, #ff00ff, #7226ff);
+  }
+  
+  .btn-small {
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+  }
+  
+  /* ==========================
+     HEADER & NAV
+  ========================== */
+  .header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 999;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+  }
+  
+  .logo {
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+  
+  .logo span {
+    color: #ff00ff;
+  }
+  
+  .nav-list {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .nav-list li {
+    display: inline-block;
+  }
+  
+  .nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .nav-link:hover {
+    color: #ff00ff;
+  }
+  
+  /* Mobile Menu Toggle */
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .bar {
+    height: 3px;
+    width: 25px;
+    margin: 3px 0;
+    background-color: #fff;
+    transition: all 0.3s;
+  }
+  
+  /* ==========================
+     HERO SECTION
+  ========================== */
+  .hero {
+    position: relative;
+    height: 100vh;
+    margin-top: 60px; /* offset for fixed header */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  #stars-canvas {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: -2;
+  }
+  
+  .hero-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(135deg, #1d1e2c, #282a36, #121212);
+    background-size: 600% 600%;
+    animation: gradientAnimation 15s ease infinite;
+    z-index: -1;
+    opacity: 0.9;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+  
+  .accent {
+    color: #ff00ff;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* Keyframe for background gradient animation */
+  @keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* ABOUT SECTION */
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    align-items: center;
+    margin-top: 2rem;
+  }
+  
+  .about-text {
+    line-height: 1.6;
+  }
+  
+  .about-img img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover; /* if you want it to fill shape */
+  }
+  
+  /* WHAT I'VE BEEN DOING SECTION */
+  .doing-grid {
+    /* A responsive grid for your “cards” */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .doing-step {
+    background: #1a1a1a; /* dark background card */
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  }
+  
+  .doing-step h3 {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
+  
+  /* SKILLS SECTION */
+  .skills-grid {
+    display: grid;
+    /* Creates as many columns as fit into the container with min. card width of 250px */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .skill-card {
+    background: #1a1a1a;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .skill-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 25px rgba(255,0,255,0.15); /* slightly highlight on hover */
+  }
+  
+  .skill-icon {
+    margin-bottom: 1rem;
+  }
+  
+  .skill-icon img,
+  .skill-icon i {
+    width: 64px;
+    height: 64px;
+    object-fit: contain; /* if using images */
+    /* or if using Font Awesome icons, set font-size: 2rem; etc. */
+  }
+  
+  .skill-card h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  
+  .skill-card p {
+    line-height: 1.6;
+  }
+  
+  /* REVEAL ANIMATION (intersection observer) */
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+  }
+  .reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  
+  /* ==========================
+     SECTION CONTENT
+  ========================== */
+  .section-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    line-height: 1.6;
+    font-size: 1rem;
+  }
+  
+  .section-content ul {
+    list-style: disc;
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+  }
+  
+  /* Experience Cards */
+  .experience-card {
+    background: #1a1a1a;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  }
+  
+  .experience-card h3 {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+  
+  .experience-card ul {
+    list-style: disc;
+    margin-left: 1.5rem;
+    margin-top: 0.5rem;
+    line-height: 1.6;
+  }
+  
+  /* Projects */
+  .project-card {
+    display: flex;
+    flex-direction: row;
+    background: #1a1a1a;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 30px rgba(255,0,255,0.2);
+  }
+  
+  .project-image img {
+    width: 100%;
+    max-width: 400px;
+    object-fit: cover;
+  }
+  
+  .project-info {
+    padding: 1rem;
+    flex: 1;
+  }
+  
+  .project-info h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+  }
+  
+  .project-info p {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+  }
+  /* CONTACT SECTION */
+.contact {
+    text-align: center;
+  }
+  
+  .section-subtitle {
+    margin-bottom: 2rem;
+    font-style: italic;
+    font-size: 1.1rem;
+  }
+  
+  /* Contact Info Row */
+  .contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    background: #1a1a1a;
+    padding: 0.75rem 1.25rem;
+    border-radius: 50px;
+    transition: background 0.3s ease;
+  }
+  
+  .contact-item:hover {
+    background: #2b2b2b;
+    color: #ff00ff; /* Or any accent color you prefer */
+  }
+  
+  .contact-icon {
+    font-size: 1.2rem;
+  }
+  
+  /* Contact Form */
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto; /* center the form */
+    text-align: left;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .form-group label {
+    margin-bottom: 0.5rem;
+    display: block;
+    font-weight: 600;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #333;
+    border-radius: 5px;
+    background: #fafafa;
+    color: #333;
+    outline: none;
+  }
+  
+  .form-btn {
+    margin-top: 1rem;
+    border: none;
+    border-radius: 50px;
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, #ff00ff, #4400ff);
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .form-btn:hover {
+    background: linear-gradient(135deg, #ff00ff, #7226ff);
+  }
+  
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: #000;
+    color: #fff;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+  }
+  
+  /* Scroll Reveal (Intersection Observer) */
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+  }
+  
+  .reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .navbar {
+      justify-content: space-between;
+    }
+  
+    .nav-list {
+      display: none;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background: #1a1a1a;
+      flex-direction: column;
+      width: 200px;
+      padding: 1rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+  
+    .nav-list.show {
+      display: flex;
+    }
+  
+    .nav-list li {
+      margin-bottom: 1rem;
+    }
+  
+    .menu-toggle {
+      display: flex;
+    }
+  
+    /* Projects stack vertically on mobile */
+    .project-card {
+      flex-direction: column;
+    }
+  
+    .project-image img {
+      max-width: 100%;
+    }
+  }
+  
