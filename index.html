@@ -32,7 +32,6 @@
       </div>
       <ul class="nav-list">
         <li><a href="#home" class="nav-link">Home</a></li>
-        <li><a href="#about" class="nav-link">About</a></li>
         <li><a href="#recent" class="nav-link">Last 2 Months</a></li>
         <li><a href="#skills" class="nav-link">Skills</a></li>
         <li><a href="#experience" class="nav-link">Experience</a></li>
@@ -55,33 +54,11 @@
         Hello, I'm <span class="accent">Simardeep Singh Mehta</span>
       </h1>
       <p class="hero-subtitle">
-        Building end-to-end MLOps & ML solutions that shape the future.
+        ML, Coffee, F1.
       </p>
-      <a href="#about" class="btn">Know More</a>
-    </div>
-  </section>
-<!-- About Me Section -->
-<section class="section container" id="about">
-    <h2 class="section-title">About Me</h2>
-    <!-- A two-column grid on larger screens, single column on mobile -->
-    <div class="about-grid">
-      <div class="about-text reveal">
-        <p>
-          I’m a passionate MLOps and Machine Learning Engineer with a background
-          in Big Data, Cloud Computing, and Computer Vision. My approach is
-          driven by curiosity, continuous learning, and a desire to create 
-          impactful solutions.
-        </p>
-        <p>
-          Currently based in NYC, I love blending cutting-edge technologies with 
-          robust engineering practices to solve real-world problems—whether 
-          that’s building advanced ML pipelines or orchestrating microservices 
-          for scalability and reliability.
-        </p>
-      </div>
-      <div class="about-img reveal">
-        <!-- Replace with your own image -->
-        <img src="img/headshot.jpg" alt="Profile Image" />
+      <div class="hero-buttons">
+        <a href="#experience" class="btn">Know More</a>
+        <a href="https://simarmehta.github.io/resume/" class="btn btn-secondary" target="_blank">View Resume</a>
       </div>
     </div>
   </section>
@@ -90,7 +67,7 @@
   <section class="section container" id="recent">
     <h2 class="section-title">What I've Been Doing</h2>
     <div class="doing-grid">
-      <!-- Each item is like a “card” for what you're up to -->
+      <!-- Each item is like a "card" for what you're up to -->
       <div class="doing-step reveal">
         <h3>Deep-Diving into LLMs</h3>
         <p>
@@ -154,7 +131,7 @@
   </section>
   <!-- Experience Section -->
   <section class="section container" id="experience">
-    <h2 class="section-title">Experience</h2>
+    <h2 class="section-title">Latest Experience</h2>
 
     <div class="experience-card reveal">
       <h3>MLOps Intern – American Institute for Research</h3>
@@ -164,98 +141,130 @@
         <li>Integrated CI/CD workflows with Docker/Kubernetes, reducing deployment time by 20%.</li>
       </ul>
     </div>
-
-    <div class="experience-card reveal">
-      <h3>Data Science Intern – Ernst & Young (EY)</h3>
-      <p><em>June 2022 – August 2022 (Gurugram, India)</em></p>
-      <ul>
-        <li>Built an ETL pipeline using AWS Glue & Lambda for 3TB+ of daily financial data, maintaining 99.9% accuracy.</li>
-        <li>Utilized Spark on EMR to reduce data processing time by 40% and integrated QuickSight & SageMaker for anomaly detection.</li>
-      </ul>
-    </div>
-
-    <div class="experience-card reveal">
-      <h3>Software Engineering Intern – OnePercent Software LLC</h3>
-      <p><em>April 2022 – June 2022 (Bengaluru, India)</em></p>
-      <ul>
-        <li>Implemented a reinforcement learning model (TensorFlow) for dynamic game difficulty, boosting user retention by 25%.</li>
-        <li>Deployed microservices (Docker + Kubernetes) and a real-time analytics pipeline (ELK) for performance tracking.</li>
-      </ul>
-    </div>
   </section>
 
-  <!-- Projects Section -->
-  <section class="section container" id="projects">
-    <h2 class="section-title">Projects</h2>
-
-    <!-- Project 1 -->
+<!-- Projects Section -->
+<section class="section container" id="projects">
+  <h2 class="section-title">Projects</h2>
+  
+  <div class="project-grid">
+    <!-- Project 1: EaTexas -->
     <div class="project-card reveal">
       <div class="project-image">
-        <img src="https://via.placeholder.com/400x250" alt="Project 1 Screenshot">
+        <img src="img/food.png" alt="EaTexas Screenshot">
       </div>
-      <div class="project-info">
-        <h3>EaTexas – Food Delivery App</h3>
-        <p>
-          Leveraged AWS Step Functions, Lex with BERT, and Rekognition with ResNet for advanced image & text analysis.
-          Deployed a serverless architecture (Lambda, API Gateway, SQS) to handle 1000+ concurrent users.
-        </p>
-        <a href="https://github.com/simarmehta/EaTexas" class="btn-small" target="_blank">View on GitHub</a>
+      <div class="project-content">
+        <h3 class="project-title">EaTexas – Food Delivery App</h3>
+        <div class="project-description">
+          <p>
+            Leveraged AWS Step Functions, Lex with BERT, and Rekognition with ResNet for advanced image & text analysis.
+            Deployed serverless architecture handling 1000+ concurrent users.
+          </p>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/simarmehta/EaTexas" class="btn-small" target="_blank">View on GitHub</a>
+        </div>
       </div>
     </div>
 
-    <!-- Project 2 -->
+    <!-- Project 2: FashionGPT -->
     <div class="project-card reveal">
       <div class="project-image">
-        <img src="https://via.placeholder.com/400x250" alt="Project 2 Screenshot">
+        <img src="img/fashion.png" alt="FashionGPT Screenshot">
       </div>
-      <div class="project-info">
-        <h3>FashionGPT – Product Recommendation System</h3>
-        <p>
-          Combined ResNet50, VGG16, collaborative filtering, and content-based methods for a 30% boost in product match accuracy.
-          Deployed on Azure Kubernetes Service with 99.99% uptime.
-        </p>
-        <a href="https://github.com/simarmehta/FashionGPT-Resnet50/tree/master/Fashion-Rec-Sys-main" 
-           class="btn-small" target="_blank"
-        >
-          View on GitHub
-        </a>
+      <div class="project-content">
+        <h3 class="project-title">FashionGPT – Product Recommendation</h3>
+        <div class="project-description">
+          <p>
+            Combined ResNet50, VGG16, and collaborative filtering for 30% boost in product match accuracy.
+            Deployed on Azure Kubernetes Service with 99.99% uptime.
+          </p>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/simarmehta/FashionGPT-Resnet50" class="btn-small" target="_blank">View on GitHub</a>
+        </div>
       </div>
     </div>
 
-    <!-- Project 3 (New) -->
+    <!-- Project 3: RAG Menu -->
     <div class="project-card reveal">
       <div class="project-image">
-        <img src="https://via.placeholder.com/400x250" alt="Project 3 Screenshot">
+        <img src="img/Agentic-RAG-blog.jpg" alt="RAG Menu Screenshot">
       </div>
-      <div class="project-info">
-        <h3>Next-Level LLM Chatbot</h3>
-        <p>
-          Experimented with advanced knowledge retrieval techniques and dynamic chain-of-thought prompting. 
-          Achieved a 15% improvement in user query resolution times.
-        </p>
-        <a href="#" class="btn-small" target="_blank">Repo Soon</a>
+      <div class="project-content">
+        <h3 class="project-title">RAG Menu Data Application</h3>
+        <div class="project-description">
+          <p>
+            Built a Retrieval-Augmented Generation chatbot using Flask and ChromaDB.
+            Integrated Llama and Azure OpenAI for enhanced knowledge retrieval.
+          </p>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/simarmehta/RAG-MenuData" class="btn-small" target="_blank">View on GitHub</a>
+        </div>
       </div>
     </div>
 
-    <!-- Project 4 (New) -->
+    <!-- Project 4: Chess Automation -->
     <div class="project-card reveal">
       <div class="project-image">
-        <img src="https://via.placeholder.com/400x250" alt="Project 4 Screenshot">
+        <img src="img/chess.png" alt="Chess Automation Screenshot">
       </div>
-      <div class="project-info">
-        <h3>Cloud-scale Anomaly Detection</h3>
-        <p>
-          Designed a Spark-based pipeline on AWS EMR to detect financial data anomalies in near real-time. 
-          Integrated MLflow for experiment tracking and model versioning.
-        </p>
-        <a href="#" class="btn-small" target="_blank">Repo Soon</a>
+      <div class="project-content">
+        <h3 class="project-title">Chess Automation using CV</h3>
+        <div class="project-description">
+          <p>
+            Developed OpenCV-based chessboard detection system for automated move tracking.
+            Implemented real-time board state identification.
+          </p>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/simarmehta/chessAutomation_CV" class="btn-small" target="_blank">View on GitHub</a>
+        </div>
       </div>
     </div>
-  </section>
+
+    <div class="project-card reveal">
+      <div class="project-image">
+        <img src="img/DOCKER.png" alt="Docker and Kubernetes Project Screenshot">
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">Docker and Kubernetes Examples</h3>
+        <div class="project-description">
+          <p>
+            Developed practical example demonstrating containerization with Docker and orchestration using Kubernetes. The project includes Dockerfiles and Kubernetes configurations for deploying and managing applications, providing hands-on experience with modern DevOps practices.
+          </p>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/simarmehta/Docker-Kubernetes" class="btn-small" target="_blank">View on GitHub</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="project-card reveal">
+      <div class="project-image">
+        <img src="img/Returning_User_1.png" alt="Cloud Dining Concierge Chatbot Screenshot">
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">Cloud Dining Concierge Chatbot</h3>
+        <div class="project-description">
+          <p>
+            Developed a serverless, microservice-driven chatbot using AWS services (Lex, Lambda, DynamoDB). The chatbot interacts with users to gather dining preferences and provides personalized restaurant recommendations by integrating with the Yelp API. It enhances user experience by delivering suggestions via SMS through AWS SNS.
+          </p>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/simarmehta/Cloud-Dining-Concierge-Chatbot" class="btn-small" target="_blank">View on GitHub</a>
+        </div>
+      </div>
+    </div>    
+      </div>
+    </div>
+  </div>
+</section>
   <section class="contact section container" id="contact">
     <h2 class="section-title">Contact</h2>
     <p class="section-subtitle reveal" style="text-align:center;">
-      Have a project in mind or just want to chat? Let’s connect.
+      Have a project in mind or just want to chat? Let's connect.
     </p>
   
     <!-- Contact Info Row -->
@@ -278,23 +287,6 @@
         <span>github.com/simarmehta</span>
       </a>
     </div>
-  
-    <!-- Contact Form (optional) -->
-    <form class="contact-form reveal">
-      <div class="form-group">
-        <label for="name">Name</label>  
-        <input type="text" id="name" placeholder="Your Name" required/>
-      </div>
-      <div class="form-group">
-        <label for="email">Email</label>  
-        <input type="email" id="email" placeholder="Your Email" required/>
-      </div>
-      <div class="form-group">
-        <label for="message">Message</label>  
-        <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
-      </div>
-      <button type="submit" class="btn form-btn">Send Message</button>
-    </form>
   </section>
   
   <!-- Footer -->

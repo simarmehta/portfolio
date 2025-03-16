@@ -216,7 +216,7 @@
   
   /* WHAT I'VE BEEN DOING SECTION */
   .doing-grid {
-    /* A responsive grid for your “cards” */
+    /* A responsive grid for your "cards" */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
@@ -332,43 +332,85 @@
   }
   
   /* Projects */
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+  }
+  
   .project-card {
-    display: flex;
-    flex-direction: row;
     background: #1a1a1a;
-    border-radius: 8px;
-    margin-bottom: 2rem;
+    border-radius: 10px;
     box-shadow: 0 0 15px rgba(0,0,0,0.3);
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
     transition: transform 0.3s, box-shadow 0.3s;
   }
   
   .project-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 0 30px rgba(255,0,255,0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(255,0,255,0.15);
+  }
+  
+  .project-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
   }
   
   .project-image img {
     width: 100%;
-    max-width: 400px;
+    height: 100%;
     object-fit: cover;
   }
   
-  .project-info {
-    padding: 1rem;
+  .project-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    color: #ffffff;
+  }
+  
+  .project-title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    font-weight: 600;
+  }
+  
+  .project-description {
     flex: 1;
   }
   
-  .project-info h3 {
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-    font-size: 1.2rem;
+  .project-description p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #cccccc;
+    margin-bottom: 1.5rem;
   }
   
-  .project-info p {
-    margin-bottom: 0.5rem;
-    line-height: 1.5;
+  .project-links {
+    margin-top: auto;
   }
+  
+  .btn-small {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, #ff00ff, #4400ff);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    transition: background 0.3s ease;
+  }
+  
+  .btn-small:hover {
+    background: linear-gradient(135deg, #ff00ff, #7226ff);
+  }
+  
   /* CONTACT SECTION */
 .contact {
     text-align: center;
@@ -511,12 +553,12 @@
     }
   
     /* Projects stack vertically on mobile */
-    .project-card {
-      flex-direction: column;
+    .project-grid {
+      grid-template-columns: 1fr;
     }
   
-    .project-image img {
-      max-width: 100%;
+    .project-card {
+      height: auto;
     }
   }
   
