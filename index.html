@@ -6,13 +6,14 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Simardeep Singh Mehta – Portfolio</title>
+  <title>Simardeep Singh Mehta – Software Development Engineer @ Amazon</title>
+  <meta name="description" content="Portfolio of Simardeep Singh Mehta - Software Development Engineer at Amazon specializing in AI/ML pipelines, AWS cloud infrastructure, and scalable backend systems">
 
-  <!-- Google Font: Montserrat (example; pick any you like) -->
+  <!-- Google Fonts: Montserrat + JetBrains Mono for code -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link 
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" 
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
     rel="stylesheet"
   >
 
@@ -20,240 +21,659 @@
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress" id="scroll-progress"></div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursor-dot"></div>
+  <div class="cursor-outline" id="cursor-outline"></div>
+
   <!-- Navigation -->
   <header class="header">
     <nav class="navbar container">
-      <div class="logo">Simar<span>Mehta</span></div>
+      <div class="logo">
+        <span class="logo-bracket">&lt;</span>Simar<span class="logo-accent">Mehta</span><span class="logo-bracket">/&gt;</span>
+      </div>
+
+      <!-- Theme Switcher -->
+      <div class="theme-switcher">
+        <button class="theme-btn active" data-theme="dark" title="Professional Blue">
+          <i class="fas fa-palette"></i>
+        </button>
+        <button class="theme-btn" data-theme="sunset" title="Sunset Orange">
+          <i class="fas fa-sun"></i>
+        </button>
+        <button class="theme-btn" data-theme="emerald" title="Emerald Green">
+          <i class="fas fa-leaf"></i>
+        </button>
+      </div>
+
       <!-- Mobile menu toggle -->
       <div class="menu-toggle" id="mobile-menu">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
       </div>
+
       <ul class="nav-list">
-        <li><a href="#home" class="nav-link">Home</a></li>
-        <li><a href="#recent" class="nav-link">Last 2 Months</a></li>
-        <li><a href="#skills" class="nav-link">Skills</a></li>
-        <li><a href="#experience" class="nav-link">Experience</a></li>
-        <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="#home" class="nav-link"><span class="nav-number">01.</span> Home</a></li>
+        <li><a href="#recent" class="nav-link"><span class="nav-number">02.</span> Recent</a></li>
+        <li><a href="#skills" class="nav-link"><span class="nav-number">03.</span> Skills</a></li>
+        <li><a href="#experience" class="nav-link"><span class="nav-number">04.</span> Experience</a></li>
+        <li><a href="#projects" class="nav-link"><span class="nav-number">05.</span> Projects</a></li>
+        <li><a href="#contact" class="nav-link"><span class="nav-number">06.</span> Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <!-- Hero Section -->
   <section class="hero section" id="home">
-    <!-- Optional starfield canvas background -->
+    <!-- Animated Background -->
     <canvas id="stars-canvas"></canvas>
-
-    <!-- Overlay or gradient if you'd like one -->
+    <div class="hero-grid-overlay"></div>
     <div class="hero-overlay"></div>
 
     <div class="hero-content container">
-      <h1 class="hero-title">
-        Hello, I'm <span class="accent">Simardeep Singh Mehta</span>
-      </h1>
-      <p class="hero-subtitle">
-        ML, Coffee, F1.
-      </p>
+      <!-- Floating Badge -->
+      <div class="hero-badge reveal">
+        <i class="fab fa-amazon"></i>
+        <span>Software Development Engineer @ Amazon</span>
+      </div>
+
+      <!-- Animated Title -->
+      <div class="hero-text">
+        <p class="hero-greeting">Hey there! I'm</p>
+        <h1 class="hero-title">
+          <span class="title-line">Simardeep Singh</span>
+          <span class="title-line"><span class="accent gradient-text">Mehta</span></span>
+        </h1>
+        <div class="hero-subtitle-container">
+          <p class="hero-subtitle">
+            <span class="typed-text"></span>
+            <span class="cursor-blink">|</span>
+          </p>
+        </div>
+        <p class="hero-description">
+          Software Development Engineer at <span class="highlight">Amazon</span> building intelligent advertising systems.
+          Specialized in <span class="highlight">AI/ML pipelines</span>, <span class="highlight">AWS cloud infrastructure</span>,
+          and scalable backend systems that power performance advertising at scale.
+        </p>
+      </div>
+
+      <!-- CTA Buttons -->
       <div class="hero-buttons">
-        <a href="#experience" class="btn">Know More</a>
-        <a href="https://simarmehta.github.io/resume/" class="btn btn-secondary" target="_blank">View Resume</a>
+        <a href="#projects" class="btn btn-primary magnetic">
+          <span>Explore My Work</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+        <a href="#contact" class="btn btn-secondary magnetic">
+          <span>Let's Connect</span>
+          <i class="fas fa-paper-plane"></i>
+        </a>
+      </div>
+
+      <!-- Tech Stack Pills -->
+      <div class="hero-tech-stack reveal">
+        <div class="tech-pill">Python</div>
+        <div class="tech-pill">PyTorch</div>
+        <div class="tech-pill">Kubernetes</div>
+        <div class="tech-pill">AWS</div>
+        <div class="tech-pill">Docker</div>
+        <div class="tech-pill">LLMs</div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div class="scroll-indicator">
+        <div class="mouse">
+          <div class="wheel"></div>
+        </div>
+        <p>Scroll to explore</p>
+      </div>
+    </div>
+
+    <!-- Floating Elements -->
+    <div class="floating-elements">
+      <div class="float-element" style="top: 20%; left: 10%;">
+        <i class="fas fa-brain"></i>
+      </div>
+      <div class="float-element" style="top: 60%; right: 15%;">
+        <i class="fas fa-robot"></i>
+      </div>
+      <div class="float-element" style="bottom: 30%; left: 20%;">
+        <i class="fas fa-cloud"></i>
       </div>
     </div>
   </section>
   
   <!-- What I've Been Doing Section -->
   <section class="section container" id="recent">
-    <h2 class="section-title">What I've Been Doing</h2>
-    <div class="doing-grid">
-      <!-- Each item is like a "card" for what you're up to -->
-      <div class="doing-step reveal">
-        <h3>Deep-Diving into LLMs</h3>
-        <p>
-          Experimenting with RAG (Retrieval Augmented Generation) frameworks and 
-          advanced prompt engineering to push the boundaries of large language models.
-        </p>
+    <div class="section-header">
+      <span class="section-number">02.</span>
+      <h2 class="section-title">Current Focus</h2>
+    </div>
+    <p class="section-subtitle">What I've been building and exploring lately</p>
+
+    <div class="timeline">
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-icon">
+            <i class="fas fa-brain"></i>
+          </div>
+          <div class="timeline-card">
+            <span class="timeline-badge">AI/ML</span>
+            <h3>Deep-Diving into LLMs</h3>
+            <p>
+              Experimenting with <strong>RAG (Retrieval Augmented Generation)</strong> frameworks and
+              advanced prompt engineering to push the boundaries of large language models.
+              Building intelligent systems that understand context and deliver precise responses.
+            </p>
+            <div class="timeline-tags">
+              <span class="tag">LangChain</span>
+              <span class="tag">LlamaIndex</span>
+              <span class="tag">Vector DBs</span>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="doing-step reveal">
-        <h3>Prototyping ML Inference Pipelines</h3>
-        <p>
-          Containerizing real-time prediction services using Docker & Kubernetes,
-          aiming to reduce latency and improve scalability.
-        </p>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-icon">
+            <i class="fas fa-server"></i>
+          </div>
+          <div class="timeline-card">
+            <span class="timeline-badge">MLOps</span>
+            <h3>Prototyping ML Inference Pipelines</h3>
+            <p>
+              Containerizing real-time prediction services using <strong>Docker & Kubernetes</strong>,
+              aiming to reduce latency and improve scalability. Building production-ready ML systems
+              that can handle thousands of requests per second.
+            </p>
+            <div class="timeline-tags">
+              <span class="tag">Docker</span>
+              <span class="tag">Kubernetes</span>
+              <span class="tag">FastAPI</span>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="doing-step reveal">
-        <h3>Sharpening Helm and Kubernetes</h3>
-        <p>
-          Building reproducible, templated deployments to ensure consistent
-          environments across staging and production.
-        </p>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-icon">
+            <i class="fas fa-dharmachakra"></i>
+          </div>
+          <div class="timeline-card">
+            <span class="timeline-badge">DevOps</span>
+            <h3>Sharpening Helm and Kubernetes</h3>
+            <p>
+              Building reproducible, templated deployments to ensure consistent
+              environments across staging and production. Mastering infrastructure as code
+              for seamless CI/CD workflows.
+            </p>
+            <div class="timeline-tags">
+              <span class="tag">Helm</span>
+              <span class="tag">ArgoCD</span>
+              <span class="tag">Terraform</span>
+            </div>
+          </div>
+        </div>
       </div>
-      <!-- Add more steps/cards as needed -->
     </div>
   </section>
   
   <!-- Skills Section -->
   <section class="section container" id="skills">
-    <h2 class="section-title">Skills</h2>
+    <div class="section-header">
+      <span class="section-number">03.</span>
+      <h2 class="section-title">Technical Arsenal</h2>
+    </div>
+    <p class="section-subtitle">Technologies I work with to build exceptional products</p>
+
     <div class="skills-grid">
-      <div class="skill-card reveal">
-        <div class="skill-icon">
-          <!-- Example using Font Awesome: <i class="fa fa-code"></i> -->
-          <img src="img/lang.png" alt="Languages Icon" />
+      <div class="skill-card reveal magnetic">
+        <div class="skill-card-inner">
+          <div class="skill-header">
+            <div class="skill-icon">
+              <img src="img/lang.png" alt="Languages Icon" />
+            </div>
+            <h3>Languages</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item">
+              <span class="skill-name">Python</span>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 95%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">C++</span>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 85%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">JavaScript</span>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 80%"></div>
+              </div>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">R</span>
+              <span class="skill-tag">Dart</span>
+              <span class="skill-tag">SQL</span>
+            </div>
+          </div>
         </div>
-        <h3>Languages</h3>
-        <p>Python, C++, R, Dart, JavaScript, HTML/CSS</p>
       </div>
-      <div class="skill-card reveal">
-        <div class="skill-icon">
-          <img src="img/frame.jpg" alt="Framework Icon" />
+
+      <div class="skill-card reveal magnetic">
+        <div class="skill-card-inner">
+          <div class="skill-header">
+            <div class="skill-icon">
+              <img src="img/frame.jpg" alt="Framework Icon" />
+            </div>
+            <h3>ML/AI Frameworks</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item">
+              <span class="skill-name">PyTorch</span>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 90%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">TensorFlow</span>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 85%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Scikit-Learn</span>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 92%"></div>
+              </div>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">OpenCV</span>
+              <span class="skill-tag">NumPy</span>
+              <span class="skill-tag">Pandas</span>
+            </div>
+          </div>
         </div>
-        <h3>Frameworks & Libraries</h3>
-        <p>PyTorch, TensorFlow, Scikit-Learn, OpenCV, Flask, NumPy, Pandas</p>
       </div>
-      <div class="skill-card reveal">
-        <div class="skill-icon">
-          <img src="img/ml.jpg" alt="Cloud Icon" />
+
+      <div class="skill-card reveal magnetic">
+        <div class="skill-card-inner">
+          <div class="skill-header">
+            <div class="skill-icon">
+              <img src="img/ml.jpg" alt="Cloud Icon" />
+            </div>
+            <h3>MLOps & Cloud</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item">
+              <span class="skill-name">Kubernetes</span>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 88%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Docker</span>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 93%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">AWS</span>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 87%"></div>
+              </div>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Helm</span>
+              <span class="skill-tag">Spark</span>
+              <span class="skill-tag">Terraform</span>
+            </div>
+          </div>
         </div>
-        <h3>MLOps & Cloud</h3>
-        <p>AWS (EC2, Glue, Lambda, Sagemaker, EMR), Docker, Kubernetes, Helm, Spark</p>
       </div>
-      <div class="skill-card reveal">
-        <div class="skill-icon">
-          <img src="img/db.png" alt="Tools Icon" />
+
+      <div class="skill-card reveal magnetic">
+        <div class="skill-card-inner">
+          <div class="skill-header">
+            <div class="skill-icon">
+              <img src="img/db.png" alt="Tools Icon" />
+            </div>
+            <h3>Databases & Tools</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item">
+              <span class="skill-name">PostgreSQL</span>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 85%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">MongoDB</span>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 82%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Git</span>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 95%"></div>
+              </div>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">ChromaDB</span>
+              <span class="skill-tag">Redis</span>
+              <span class="skill-tag">Linux</span>
+            </div>
+          </div>
         </div>
-        <h3>Databases & Tools</h3>
-        <p>MongoDB, PostgreSQL, Terraform, Git, Linux</p>
       </div>
-      <!-- Add more skill-cards if desired -->
     </div>
   </section>
   <!-- Experience Section -->
   <section class="section container" id="experience">
-    <h2 class="section-title">Latest Experience</h2>
+    <div class="section-header">
+      <span class="section-number">04.</span>
+      <h2 class="section-title">Professional Journey</h2>
+    </div>
+    <p class="section-subtitle">Where I've applied my skills to solve real-world problems</p>
 
-    <div class="experience-card reveal">
-      <h3>MLOps Intern – American Institute for Research</h3>
-      <p><em>May 2024 – August 2024 (New York, USA)</em></p>
-      <ul>
-        <li>Developed an ensemble RAG system combining open-source Llama model & Azure OpenAI; improved retrieval efficiency by 25%.</li>
-        <li>Integrated CI/CD workflows with Docker/Kubernetes, reducing deployment time by 20%.</li>
-      </ul>
+    <div class="experience-timeline">
+      <!-- Current Role: Amazon -->
+      <div class="experience-card reveal">
+        <div class="experience-header">
+          <div class="experience-company">
+            <h3>Software Development Engineer (SDE)</h3>
+            <h4>Amazon – Performance Advertising Core</h4>
+          </div>
+          <div class="experience-meta">
+            <span class="experience-duration">
+              <i class="fas fa-calendar-alt"></i>
+              July 2025 – Present
+            </span>
+            <span class="experience-location">
+              <i class="fas fa-map-marker-alt"></i>
+              New York, USA
+            </span>
+          </div>
+        </div>
+        <div class="experience-content">
+          <ul class="experience-achievements">
+            <li>
+              <i class="fas fa-check-circle"></i>
+              <span>Led a <strong>3-member team</strong> to launch <strong>ADSP Standard Image Display</strong>, enabling automated image localization via AWS CDK pipelines and AI models, expanding advertiser reach across new regions</span>
+            </li>
+            <li>
+              <i class="fas fa-check-circle"></i>
+              <span>Built an <strong>immersive video localization pipeline</strong> using Nova AI for in-painting and dynamic translation. Integrated AWS Lambda, CloudFormation, and S3 for automated fallbacks to the legacy subtitle-rendering system, improving ad engagement and projected revenue by <span class="highlight-metric">12%</span></span>
+            </li>
+            <li>
+              <i class="fas fa-check-circle"></i>
+              <span>Resolved critical <strong>API and asset-linking issues</strong> during the OLV launch by reconfiguring parent-child video mappings in AWS Pipelines and S3, and strengthening unit and integration test coverage, ensuring an on-time release with no downstream issues</span>
+            </li>
+          </ul>
+          <div class="experience-tech">
+            <span class="tech-badge">AWS CDK</span>
+            <span class="tech-badge">Lambda</span>
+            <span class="tech-badge">CloudFormation</span>
+            <span class="tech-badge">S3</span>
+            <span class="tech-badge">Nova AI</span>
+            <span class="tech-badge">Python</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Previous Role: AIR -->
+      <div class="experience-card reveal">
+        <div class="experience-header">
+          <div class="experience-company">
+            <h3>MLOps Intern</h3>
+            <h4>American Institute for Research</h4>
+          </div>
+          <div class="experience-meta">
+            <span class="experience-duration">
+              <i class="fas fa-calendar-alt"></i>
+              May 2024 – Aug 2024
+            </span>
+            <span class="experience-location">
+              <i class="fas fa-map-marker-alt"></i>
+              New York, USA
+            </span>
+          </div>
+        </div>
+        <div class="experience-content">
+          <ul class="experience-achievements">
+            <li>
+              <i class="fas fa-check-circle"></i>
+              <span>Developed an <strong>ensemble RAG system</strong> combining open-source Llama model & Azure OpenAI; improved retrieval efficiency by <span class="highlight-metric">25%</span></span>
+            </li>
+            <li>
+              <i class="fas fa-check-circle"></i>
+              <span>Integrated <strong>CI/CD workflows</strong> with Docker/Kubernetes, reducing deployment time by <span class="highlight-metric">20%</span></span>
+            </li>
+            <li>
+              <i class="fas fa-check-circle"></i>
+              <span>Built scalable ML infrastructure handling <span class="highlight-metric">1000+ concurrent requests</span></span>
+            </li>
+          </ul>
+          <div class="experience-tech">
+            <span class="tech-badge">Python</span>
+            <span class="tech-badge">LangChain</span>
+            <span class="tech-badge">Azure OpenAI</span>
+            <span class="tech-badge">Docker</span>
+            <span class="tech-badge">Kubernetes</span>
+            <span class="tech-badge">CI/CD</span>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
 <!-- Projects Section -->
 <section class="section container" id="projects">
-  <h2 class="section-title">Projects</h2>
-  
+  <div class="section-header">
+    <span class="section-number">05.</span>
+    <h2 class="section-title">Featured Projects</h2>
+  </div>
+  <p class="section-subtitle">Building intelligent systems that solve real problems</p>
+
   <div class="project-grid">
     <!-- Project 1: EaTexas -->
-    <div class="project-card reveal">
+    <div class="project-card reveal magnetic">
+      <div class="project-number">01</div>
       <div class="project-image">
-        <img src="img/food.png" alt="EaTexas Screenshot">
+        <img src="img/food.png" alt="EaTexas Screenshot" loading="lazy">
+        <div class="project-overlay">
+          <span class="project-category">Serverless AI</span>
+        </div>
       </div>
       <div class="project-content">
         <h3 class="project-title">EaTexas – Food Delivery App</h3>
         <div class="project-description">
           <p>
-            Leveraged AWS Step Functions, Lex with BERT, and Rekognition with ResNet for advanced image & text analysis.
-            Deployed serverless architecture handling 1000+ concurrent users.
+            Leveraged <strong>AWS Step Functions, Lex with BERT</strong>, and Rekognition with ResNet for advanced
+            image & text analysis. Deployed serverless architecture handling <strong>1000+ concurrent users</strong>.
           </p>
         </div>
+        <div class="project-tech">
+          <span class="tech-tag">AWS Lambda</span>
+          <span class="tech-tag">BERT</span>
+          <span class="tech-tag">ResNet</span>
+          <span class="tech-tag">Rekognition</span>
+        </div>
         <div class="project-links">
-          <a href="https://github.com/simarmehta/EaTexas" class="btn-small" target="_blank">View on GitHub</a>
+          <a href="https://github.com/simarmehta/EaTexas" class="btn-small magnetic" target="_blank">
+            <i class="fab fa-github"></i>
+            <span>View Code</span>
+          </a>
         </div>
       </div>
     </div>
 
     <!-- Project 2: FashionGPT -->
-    <div class="project-card reveal">
+    <div class="project-card reveal magnetic">
+      <div class="project-number">02</div>
       <div class="project-image">
-        <img src="img/fashion.png" alt="FashionGPT Screenshot">
+        <img src="img/fashion.png" alt="FashionGPT Screenshot" loading="lazy">
+        <div class="project-overlay">
+          <span class="project-category">Computer Vision</span>
+        </div>
       </div>
       <div class="project-content">
         <h3 class="project-title">FashionGPT – Product Recommendation</h3>
         <div class="project-description">
           <p>
-            Combined ResNet50, VGG16, and collaborative filtering for 30% boost in product match accuracy.
-            Deployed on Azure Kubernetes Service with 99.99% uptime.
+            Combined <strong>ResNet50, VGG16</strong>, and collaborative filtering for <strong>30% boost</strong>
+            in product match accuracy. Deployed on Azure Kubernetes Service with <strong>99.99% uptime</strong>.
           </p>
         </div>
+        <div class="project-tech">
+          <span class="tech-tag">ResNet50</span>
+          <span class="tech-tag">VGG16</span>
+          <span class="tech-tag">AKS</span>
+          <span class="tech-tag">PyTorch</span>
+        </div>
         <div class="project-links">
-          <a href="https://github.com/simarmehta/FashionGPT-Resnet50" class="btn-small" target="_blank">View on GitHub</a>
+          <a href="https://github.com/simarmehta/FashionGPT-Resnet50" class="btn-small magnetic" target="_blank">
+            <i class="fab fa-github"></i>
+            <span>View Code</span>
+          </a>
         </div>
       </div>
     </div>
 
     <!-- Project 3: RAG Menu -->
-    <div class="project-card reveal">
+    <div class="project-card reveal magnetic">
+      <div class="project-number">03</div>
       <div class="project-image">
-        <img src="img/Agentic-RAG-blog.jpg" alt="RAG Menu Screenshot">
+        <img src="img/Agentic-RAG-blog.jpg" alt="RAG Menu Screenshot" loading="lazy">
+        <div class="project-overlay">
+          <span class="project-category">LLM Application</span>
+        </div>
       </div>
       <div class="project-content">
         <h3 class="project-title">RAG Menu Data Application</h3>
         <div class="project-description">
           <p>
-            Built a Retrieval-Augmented Generation chatbot using Flask and ChromaDB.
-            Integrated Llama and Azure OpenAI for enhanced knowledge retrieval.
+            Built a <strong>Retrieval-Augmented Generation</strong> chatbot using Flask and ChromaDB.
+            Integrated <strong>Llama and Azure OpenAI</strong> for enhanced knowledge retrieval.
           </p>
         </div>
+        <div class="project-tech">
+          <span class="tech-tag">RAG</span>
+          <span class="tech-tag">ChromaDB</span>
+          <span class="tech-tag">Llama</span>
+          <span class="tech-tag">Flask</span>
+        </div>
         <div class="project-links">
-          <a href="https://github.com/simarmehta/RAG-MenuData" class="btn-small" target="_blank">View on GitHub</a>
+          <a href="https://github.com/simarmehta/RAG-MenuData" class="btn-small magnetic" target="_blank">
+            <i class="fab fa-github"></i>
+            <span>View Code</span>
+          </a>
         </div>
       </div>
     </div>
 
     <!-- Project 4: Chess Automation -->
-    <div class="project-card reveal">
+    <div class="project-card reveal magnetic">
+      <div class="project-number">04</div>
       <div class="project-image">
-        <img src="img/chess.png" alt="Chess Automation Screenshot">
+        <img src="img/chess.png" alt="Chess Automation Screenshot" loading="lazy">
+        <div class="project-overlay">
+          <span class="project-category">Computer Vision</span>
+        </div>
       </div>
       <div class="project-content">
         <h3 class="project-title">Chess Automation using CV</h3>
         <div class="project-description">
           <p>
-            Developed OpenCV-based chessboard detection system for automated move tracking.
-            Implemented real-time board state identification.
+            Developed <strong>OpenCV-based chessboard detection</strong> system for automated move tracking.
+            Implemented real-time board state identification with high accuracy.
           </p>
         </div>
+        <div class="project-tech">
+          <span class="tech-tag">OpenCV</span>
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">Computer Vision</span>
+        </div>
         <div class="project-links">
-          <a href="https://github.com/simarmehta/chessAutomation_CV" class="btn-small" target="_blank">View on GitHub</a>
+          <a href="https://github.com/simarmehta/chessAutomation_CV" class="btn-small magnetic" target="_blank">
+            <i class="fab fa-github"></i>
+            <span>View Code</span>
+          </a>
         </div>
       </div>
     </div>
 
-    <div class="project-card reveal">
+    <!-- Project 5: Docker & Kubernetes -->
+    <div class="project-card reveal magnetic">
+      <div class="project-number">05</div>
       <div class="project-image">
-        <img src="img/DOCKER.png" alt="Docker and Kubernetes Project Screenshot">
+        <img src="img/DOCKER.png" alt="Docker and Kubernetes Project Screenshot" loading="lazy">
+        <div class="project-overlay">
+          <span class="project-category">DevOps</span>
+        </div>
       </div>
       <div class="project-content">
         <h3 class="project-title">Docker and Kubernetes Examples</h3>
         <div class="project-description">
           <p>
-            Developed practical example demonstrating containerization with Docker and orchestration using Kubernetes. The project includes Dockerfiles and Kubernetes configurations for deploying and managing applications, providing hands-on experience with modern DevOps practices.
+            Developed practical examples demonstrating <strong>containerization with Docker</strong> and orchestration
+            using Kubernetes. Production-ready configurations for modern DevOps practices.
           </p>
         </div>
+        <div class="project-tech">
+          <span class="tech-tag">Docker</span>
+          <span class="tech-tag">Kubernetes</span>
+          <span class="tech-tag">Helm</span>
+          <span class="tech-tag">CI/CD</span>
+        </div>
         <div class="project-links">
-          <a href="https://github.com/simarmehta/Docker-Kubernetes" class="btn-small" target="_blank">View on GitHub</a>
+          <a href="https://github.com/simarmehta/Docker-Kubernetes" class="btn-small magnetic" target="_blank">
+            <i class="fab fa-github"></i>
+            <span>View Code</span>
+          </a>
         </div>
       </div>
     </div>
-    
-    <div class="project-card reveal">
+
+    <!-- Project 6: Dining Concierge Chatbot -->
+    <div class="project-card reveal magnetic">
+      <div class="project-number">06</div>
       <div class="project-image">
-        <img src="img/Returning_User_1.png" alt="Cloud Dining Concierge Chatbot Screenshot">
+        <img src="img/Returning_User_1.png" alt="Cloud Dining Concierge Chatbot Screenshot" loading="lazy">
+        <div class="project-overlay">
+          <span class="project-category">Serverless</span>
+        </div>
       </div>
       <div class="project-content">
         <h3 class="project-title">Cloud Dining Concierge Chatbot</h3>
         <div class="project-description">
           <p>
-            Developed a serverless, microservice-driven chatbot using AWS services (Lex, Lambda, DynamoDB). The chatbot interacts with users to gather dining preferences and provides personalized restaurant recommendations by integrating with the Yelp API. It enhances user experience by delivering suggestions via SMS through AWS SNS.
+            Developed a <strong>serverless, microservice-driven chatbot</strong> using AWS services. Provides personalized
+            restaurant recommendations via <strong>Yelp API</strong> integration with SMS delivery.
           </p>
         </div>
+        <div class="project-tech">
+          <span class="tech-tag">AWS Lex</span>
+          <span class="tech-tag">Lambda</span>
+          <span class="tech-tag">DynamoDB</span>
+          <span class="tech-tag">SNS</span>
+        </div>
         <div class="project-links">
-          <a href="https://github.com/simarmehta/Cloud-Dining-Concierge-Chatbot" class="btn-small" target="_blank">View on GitHub</a>
+          <a href="https://github.com/simarmehta/Cloud-Dining-Concierge-Chatbot" class="btn-small magnetic" target="_blank">
+            <i class="fab fa-github"></i>
+            <span>View Code</span>
+          </a>
         </div>
       </div>
     </div>    
@@ -262,30 +682,64 @@
   </div>
 </section>
   <section class="contact section container" id="contact">
-    <h2 class="section-title">Contact</h2>
-    <p class="section-subtitle reveal" style="text-align:center;">
-      Have a project in mind or just want to chat? Let's connect.
-    </p>
-  
-    <!-- Contact Info Row -->
-    <div class="contact-info reveal">
-      <!-- Email -->
-      <a href="mailto:sm11377@nyu.edu" class="contact-item" target="_blank">
-        <i class="fas fa-envelope contact-icon"></i>
-        <span>sm11377@nyu.edu</span>
-      </a>
-      
-      <!-- LinkedIn -->
-      <a href="https://linkedin.com/in/simarnyu" class="contact-item" target="_blank">
-        <i class="fab fa-linkedin contact-icon"></i>
-        <span>linkedin.com/in/simarnyu</span>
-      </a>
-      
-      <!-- GitHub -->
-      <a href="https://github.com/simarmehta" class="contact-item" target="_blank">
-        <i class="fab fa-github contact-icon"></i>
-        <span>github.com/simarmehta</span>
-      </a>
+    <div class="section-header">
+      <span class="section-number">06.</span>
+      <h2 class="section-title">Get In Touch</h2>
+    </div>
+
+    <div class="contact-container">
+      <div class="contact-intro reveal">
+        <h3>Let's Build Something Amazing Together</h3>
+        <p>
+          Whether you have a project in mind, want to collaborate, or just want to chat about ML, DevOps,
+          or F1 racing, I'd love to hear from you. My inbox is always open!
+        </p>
+      </div>
+
+      <!-- Contact Info Row -->
+      <div class="contact-info reveal">
+        <!-- Email -->
+        <a href="mailto:sm11377@nyu.edu" class="contact-item magnetic">
+          <div class="contact-icon-wrapper">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="contact-details">
+            <span class="contact-label">Email</span>
+            <span class="contact-value">sm11377@nyu.edu</span>
+          </div>
+        </a>
+
+        <!-- LinkedIn -->
+        <a href="https://linkedin.com/in/simarnyu" class="contact-item magnetic" target="_blank" rel="noopener noreferrer">
+          <div class="contact-icon-wrapper">
+            <i class="fab fa-linkedin"></i>
+          </div>
+          <div class="contact-details">
+            <span class="contact-label">LinkedIn</span>
+            <span class="contact-value">linkedin.com/in/simarnyu</span>
+          </div>
+        </a>
+
+        <!-- GitHub -->
+        <a href="https://github.com/simarmehta" class="contact-item magnetic" target="_blank" rel="noopener noreferrer">
+          <div class="contact-icon-wrapper">
+            <i class="fab fa-github"></i>
+          </div>
+          <div class="contact-details">
+            <span class="contact-label">GitHub</span>
+            <span class="contact-value">github.com/simarmehta</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Resume CTA -->
+      <div class="contact-resume reveal">
+        <a href="https://simarmehta.github.io/resume/" class="btn btn-primary btn-large magnetic" target="_blank" rel="noopener noreferrer">
+          <i class="fas fa-file-alt"></i>
+          <span>View My Resume</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
     </div>
   </section>
   
