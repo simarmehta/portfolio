@@ -126,7 +126,9 @@ magneticElements.forEach(element => {
     const x = e.clientX - rect.left - rect.width / 2;
     const y = e.clientY - rect.top - rect.height / 2;
 
-    element.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+    // Use lighter magnetic effect for project cards to prevent overlap
+    const multiplier = element.classList.contains('project-card') ? 0.05 : 0.3;
+    element.style.transform = `translate(${x * multiplier}px, ${y * multiplier}px)`;
   });
 
   element.addEventListener('mouseleave', () => {

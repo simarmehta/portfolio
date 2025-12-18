@@ -546,7 +546,7 @@ body {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
-  margin-bottom: 4rem;
+  margin-bottom: 8rem;
 }
 
 .tech-pill {
